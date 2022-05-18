@@ -5,16 +5,17 @@ import keyboard
 
 def collect_all():
     findAndClick('collect-all.png', 0.8, 'Collect Reward')
-    time.sleep(1)
+    # time.sleep(0.5)
     findAndClick('ok.png', 0.9, 'OK')
-    time.sleep(2)
+    # time.sleep(0.5)
     findAndClick('close.png', 0.8, 'Close Reward')
-    time.sleep(2)
+    time.sleep(0.4)
 
 
 def repeat_event():
-    findAndClick('ticket.png', 0.7, 'Start with Ticket')
-    findAndClick('purchase-tickets.png', 0.7, '1 Orb = 5 Tickets')
+    findAndClick('x5.png', 0.7, 'Start with Ticket')
+    findAndClick('ok.png', 0.9, 'Skip Friend Point Exceeded')
+    findAndClick('purchase-tickets.png', 0.85, 'Start Quest 1 Orb = 5 Tickets')
     findAndClick('tap-screen.png', 0.8, 'Tap Screen')
     findAndClick('result-screen.png', 0.8, 'Result Screen')
     findAndClick('tap-screen.png', 0.8, 'Tap Screen')
@@ -52,14 +53,14 @@ try:
             print('Stop and Exit')
             break
 
-        if c_round > 1000:
+        if c_round > 2000:
             print('Completed Round' + c_round)
             break
 
-        # repeat_event()
+        repeat_event()
         # findAndClick('retry-chronicle.png', 0.7, 'Start with Ticket')
-        collect_all()
+        # collect_all()
 
-        time.sleep(0.3)
+        time.sleep(1)
 except KeyboardInterrupt:
     print('\n')
