@@ -36,6 +36,7 @@ try:
             findAndClick('noti.png', 0.8, 'Click Guild Noti')
         else:
             findAndClick('5ticket.png', 0.9, 'Active x5')
+            time.sleep(0.5)
             findAndClick('ready5x.png', 0.5, 'Ready')
         
         if findAndClick('join.png', 0.8, 'Join Room') is True:
