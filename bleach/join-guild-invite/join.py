@@ -32,10 +32,11 @@ try:
         # Resolution Windows 1024x576 /w Lobby Screen
         if findAndClick('title.png', 0.8, 'Room') is False:
             findAndClick('noti.png', 0.8, 'Click Guild Noti')
+        else:
+            findAndClick('5ticket.png', 0.9, 'Active x5')
+            findAndClick('ready5x.png', 0.5, 'Ready')
         
         findAndClick('join.png', 0.8, 'Join Room')
-        findAndClick('5ticket.png', 0.9, 'Active x5')
-        findAndClick('ready5x.png', 0.5, 'Ready')
         findAndClick('tap-screen.png', 0.8, 'TAP SCREEN')
         findAndClick('items-obtained.png', 0.8, 'Items Obtained')
         findAndClick('result-screen.png', 0.8, 'Result Screen')
